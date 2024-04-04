@@ -1,0 +1,147 @@
+/* log in page style*/
+.background-color {
+    -fx-background-color:#F1EFE9 ; /*#7827E6*/
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-font-size: 15px;
+}
+.login-input-field{
+    -fx-pref-width: 350px;
+    -fx-pref-height: 40px;
+    -fx-background-color:  #E5E5E5;
+    -fx-font: 16px "Arial";
+    -fx-font-weight: bold;
+}
+.login-input-field:hover{
+    -fx-border-color:  black;
+    -fx-cursor: hand;
+}
+.login-input-field:focused{
+    -fx-border-color: #7827E6;
+    -fx-background-color:white;
+}
+.login-button{
+    -fx-pref-width: 350px;
+    -fx-pref-height: 40px;
+    -fx-background-color:  #7827E6;/*#AA4FF6*/
+    -fx-font: 20px "Arial";
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+.login-button:hover{
+    -fx-background-color:  black;
+    -fx-cursor: hand;
+}
+
+/* for main screen side bar*/
+
+.navigationBar {
+    -fx-pref-height: 100px;
+    -fx-background-color:  #F1EFE9;
+}
+
+.navigation-buttons{
+    -fx-background-color: white; /*#AA4FF6*/
+    -fx-font: 20px "Arial";
+    -fx-background-radius: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-padding: 5px 15px;
+}
+.navigation-buttons:hover{
+    -fx-background-color:  #7827E6;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+.navigation-buttons:focused{
+    -fx-background-color:  #7827E6;
+    -fx-text-fill: white;
+}
+.tabs{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 20px;
+    -fx-background-radius: 20px;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color:#F1EFE9 ;
+}
+.scroll-pane .content {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.product-card {
+    -fx-background-color: white;
+    -fx-padding: 10px;
+    -fx-pref-width: 350px;
+    -fx-pref-height: 257px;
+    -fx-background-radius: 15px;
+    -fx-transition: all 3s ease;
+}
+
+.product-card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0.5, 0, 0);
+}
+
+.status-style{
+    -fx-background-color: #E5F9B3;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 15px;
+    -fx-background-radius: 20px;
+}
+
+.bottom-style{
+    -fx-background-color: #E2E2E2E4;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 20px;
+}
+.add-button{
+   /* -fx-pref-width: 118px;*/
+    -fx-min-width: 118px;
+    -fx-max-width: 200px;
+    -fx-pref-height: 40px;
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #f472b6;
+
+}
+
+.product-card:hover .add-button {
+    -fx-background-color: #f472b6;
+    -fx-text-fill: white;
+}
+
+.add-button:hover{
+    -fx-background-color:  black;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+.side-bar{
+    -fx-background-color: white;
+    -fx-pref-width: 400px;
+    -fx-padding: 0px 0px 10px 0px;
+}
+.side-bar-item{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: gray;
+    -fx-padding: 10px 5px;
+    -fx-font-size: 15px;
+    -fx-pref-width: 400px;
+}
+.side-bar-button{
+    -fx-pref-width: 240px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #f472b6;
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #f472b6;
+}
+.side-bar-button:hover{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+/* Path: src/main/java/com/example/hello/Style.css */
