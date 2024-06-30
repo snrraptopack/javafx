@@ -4,6 +4,7 @@ module com.example.hello {
     requires fontawesomefx;
     requires java.sql;
     requires sqlite.jdbc;
+    requires java.desktop;
 
 
     opens com.example.hello to javafx.fxml;

@@ -1,8 +1,11 @@
 package com.example.hello;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -12,11 +15,24 @@ class AddProduct extends StackPane{
     TextField name = new TextField("");
     TextField quantity = new TextField("");
     TextField  price = new TextField("");
+    ComboBox<String> supplierComboBox = new ComboBox<>();
     TextField supplier = new TextField("");
     TextField category = new TextField("");
+    TextField description = new TextField("");
     Button add = new Button("Add product");
+    GetDatabase getDatabase = new GetDatabase();
 
     AddProduct(){
+        ObservableList<String> suppliers = FXCollections.observableArrayList(getDatabase.getSupplier());
+        supplierComboBox.setItems(suppliers);
+
+        supplierComboBox.setOnAction(event -> {
+            String selectedSupplier = supplierComboBox.getSelectionModel().getSelectedItem();
+            if (selectedSupplier != null) {
+                supplier.setText(selectedSupplier);
+            }
+        });
+
         getChildren().add(component());
         getStyleClass().add("background-color");
     }
@@ -34,8 +50,10 @@ class AddProduct extends StackPane{
         gridPane.addRow(0,new Label("product name : "),name);
         gridPane.addRow(1,new Label("quantity"),quantity);
         gridPane.addRow(2,new Label("price"),price);
-        gridPane.addRow(3,new Label("supplier"),supplier);
-        gridPane.addRow(4,new Label("category"),category);
+        gridPane.addRow(3,new Label("suppliers"),supplierComboBox);
+        gridPane.addRow(4,new Label("supplier"),supplier);
+        gridPane.addRow(5,new Label("category"),category);
+        gridPane.addRow(6,new Label("description"),description);
         gridPane.addColumn(1,add);
         styles();
         return  gridPane;
@@ -64,5 +82,6 @@ class AddProduct extends StackPane{
         price.setText("");
         supplier.setText("");
         category.setText("");
+        description.setText("");
     }
 }

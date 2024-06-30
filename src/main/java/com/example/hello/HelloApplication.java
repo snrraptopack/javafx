@@ -5,7 +5,6 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.Objects;
-
 public class HelloApplication extends Application {
     GetDatabase getDatabase = new GetDatabase();
 

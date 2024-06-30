@@ -8,11 +8,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 public class NavigationBar extends VBox {
-    Label myLogo = new Label("Order Me");
     Label home = new Label("Home");
     Label addProduct = new Label("Add Product");
-    Label billing = new Label("Remove Product");
-    Label Profile = new Label("Profile");
+    Label billing = new Label("Transactions");
+    Label Profile = new Label("Total Value");
     NavigationBar() {
         getStyleClass().add("navigationBar");
         setSpacing(2);
